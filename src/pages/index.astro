@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CounterReact from '../components/CounterReact.tsx';
+import CounterVue from '../components/CounterVue.vue';
+import { Image, Picture } from '@astrojs/image/components';
+
+const sA = "/images/desImage.jpg"
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+        <CounterReact  client:load/>
+        <CounterVue  client:load/>
+        <Image src={sA}  width={400} height={400} alt={'title'} fit={'contain'}/>
+	</main>
+</Layout>
+
+<style>
+
+</style>
